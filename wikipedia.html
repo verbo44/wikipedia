@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Wikipedia</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		html {
+			font-size: 16px;
+		}
+		body {
+			height: 100vh;
+			width: 100vw;
+		  font-size: 1rem;
+			line-height: 140%;
+			font-family: sans-serif;
+			background: #f6f6f6;
+		
+		}
+		.top-navigation-menu {
+			margin-top: 0.5rem;
+			margin-bottom: 1.5rem;
+			margin-right: 1rem;
+			display: inline-block;
+			float: right;
+			font-size: 0.8rem;
+		}
+		.menu-links {
+			margin-right: 0.65rem;
+		}
+		.main-content {
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			background: #FFF;
+			border: 1px solid #a7d7f9;
+			width: 85%;
+			display: inline-block;
+			float: right;
+		}
+		.nav_menu {
+			font-size: 0.8rem;
+			margin-bottom: 2.5rem;
+			margin-left: 0.35rem;
+			margin-right: 1rem;
+			margin-top: 0.25rem;
+		}
+		.left {
+			display: inline-block;
+			float: left;
+			margin-right: 5rem;
+		}
+		.right {
+			display: inline-block;
+			float: right;
+		}
+		.nav-menu {
+			margin-right: 0.8rem;
+		}
+		a {
+			color: #066cc7;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		.search {
+			color: grey;
+		}
+		h1 {
+			font-size: 2rem;
+			font-style: oblique;
+			margin-top: 1rem;
+			margin-left: 1.5rem;
+			margin-right: 1.5rem;
+		}
+		h1::after {
+    content: "";
+    display: block;
+    height: .0625rem;
+    width: 100%;
+		background-color: #a2a9b1;
+		margin-top: 0.6rem;
+		margin-bottom: 0.6rem;	
+		}
+		.source {
+			font-size: 0.9rem;
+			margin-bottom: 1.125rem;
+		}
+		.content-box {
+		 border: 1px solid #a2a9b1;
+		 background: #f8f9fa;
+  	 padding: 0.75rem;
+		 width: 7.25rem;
+		 margin-left: 1.5rem;
+		 margin-top: 1rem;
+		 margin-bottom: 1rem;
+		}
+		.cont_paragh {
+			margin: 0;
+			padding: 0;
+		}
+		ol {
+			list-style-type: decimal-leading-zero;
+		}
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+			margin-left: 1.5rem;
+			margin-right: 1.5rem;
+		}
+		h2::after {
+    content: "";
+    display: block;
+    height: .0625rem;
+    width: 100%;
+		background-color: #a2a9b1;
+		margin-top: 0.3rem;
+		margin-bottom: 0.6rem;	
+		}
+		h3 {
+			font-size: 1.2rem;
+			font-weight: bold;
+			margin-left: 1.5rem;
+			margin-bottom: 1rem;
+			margin-top: 1rem;
+		}
+		p {
+			margin-left: 1.5rem;
+			margin-right: 1.5rem;
+		}
+		.reference {
+			list-style-type: decimal;
+			margin-left: 2.5rem;
+			margin-top: 0.5rem;
+			font-size: 0.9rem;
+		}
+		.external {
+			margin-left: 1.5rem;
+		}
+		.external_link {
+			font-style: oblique;
+		}
+		.categories {
+			border: 1px solid #a2a9b1;
+			padding: 0.35rem;
+			margin-top: 1rem;
+			margin-left: 1.5rem;
+			margin-bottom: 1rem;
+			margin-right: 1.5rem;
+			background: #f8f9fa;
+		}
+		.line {
+			color: #a2a9b1;
+		}
+		.category {
+			margin: 0;
+			padding: 0;
+		}
+		.main {
+			color: darkblue;
+			text-decoration: none;
+		}
+		.footer {
+			font-size: 0.7rem;
+			margin-bottom: 0.8rem;
+		}
+		.footer_links {
+			margin-left: 1.5rem;
+			margin-top: 1rem;
+			font-size: 0.7rem;
+			margin-bottom: 2rem;
+		}
+		.footer-menu {
+			margin-right: 0.75rem;
+		}
+		.side-menu {
+		width: 8%;
+		display: inline-block;
+		float: left;
+		font-size: 0.8rem;
+		margin-top: 1rem;
+		margin-left: 1.5rem;
+		}
+		#logo {
+			height: 10rem;
+			width: 14rem;
+			margin-left: -2rem;
+			margin-bottom: 1rem;
+		}
+		h4 {
+			margin-top: 1rem;
+		}
+		h4:after {
+			content: "";
+    	display: block;
+    	height: .0625rem;
+			width: 100%;
+			background-color: #a2a9b1;
+			margin-top: 0.4rem;
+			margin-bottom: 0.4rem;
+		}
+		
+		/* -- Picture-box style -- */
+		
+		.content-box-image {
+	width: 17.5rem; 
+	border: 1px solid #a2a9b1;
+	display: inline-block;
+	float: right;
+	background: #f8f9fa;
+	margin-left: 1rem;
+	margin-bottom: 1rem;
+	margin-right: 1.5rem;
+}
+figure {
+	padding-left: 1.75rem;
+	padding-right: 1.75rem;
+	padding-top: 0.5rem;
+}
+.pic {
+	text-align: center;
+	font-weight: 700;
+	padding-bottom: 0.5rem;
+	font-size: 0.9rem;
+	font-style: oblique;
+}
+figcaption {
+	font-size: 0.8rem;
+	text-align: center;
+}
+table {
+	line-height: 1.5rem;
+}
+td {
+	padding-left: 0.5rem;
+}
+
+img {
+	text-align: center;
+}
+.footer_page {
+	display: block;
+	float: right;
+	margin-left: 12.5rem;
+	margin-top: 1.5rem;
+}
+
+		
+		/* -- style of picture card -- */	
+		
+		
+		.picture-card {
+			font-size: 0.7rem;
+			margin: 0;
+			padding: 0;
+		}
+		.card {
+  		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  		transition: 0.3s;
+  		width: 9rem;
+			display: inline-block;
+			float: left;
+			margin-right: 1.5rem;
+			margin-left: 1.5rem;
+			margin-bottom: 1.5rem;
+			border: 1px solid #a2a9b1;
+		}
+
+		.card:hover {
+  		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+
+		.container {
+  		padding: 2px 16px;
+		}
+		
+		---------------------------
+
+	
+	
+	
+	</style>
+</head>
+<body>
+	<div class="top-navigation-menu">
+		<span class="status"><i class="fa fa-user" aria-hidden="true"></i>Not logged in</span>
+		<a class="menu-links" href="#">Talk</a>
+		<a class="menu-links" href="#">Contributions</a>
+		<a class="menu-links" href="#">Create account</a>
+		<a class="menu-links" href="#">Log in</a>
+	</div>
+	<div class="side-menu">
+		<img id="logo" src="assets/wiki.png" alt="logo">
+		<ul>
+			<li><a class="main" href="#">Main Page</a></li>
+			<li><a href="#">Contents</a></li>
+			<li><a href="#">Featured content</a></li>
+			<li><a href="#">Current event</a></li>
+			<li><a href="#">Random Article</a></li>
+			<li><a href="#">Donate to Wikipedia</a></li>
+			<li><a href="#">Wikipedia store</a></li>
+		</ul>
+		
+		<h4>Interaction</h4>
+		
+		<ul>
+			<li><a href="#">Help</a></li>
+			<li><a href="#">About Wikipedia</a></li>
+			<li><a href="#">Community portal</a></li>
+			<li><a href="#">Recent changes</a></li>
+			<li><a href="#">Contact page</a></li>
+		</ul>
+		
+		<h4>Tools</h4>
+		<ul>
+			<li><a href="#">What links here</a></li>
+			<li><a href="#">Related changes</a></li>
+			<li><a href="#">Upload file</a></li>
+			<li><a href="#">Special pages</a></li>
+			<li><a href="#">Pernament link</a></li>
+			<li><a href="#">Page information</a></li>
+			<li><a href="#">Wikidata item</a></li>
+			<li><a href="#">Cite this page</a></li>
+		</ul>
+
+		<h4>Print/export</h4>
+		
+		<ul>
+			<li><a href="#">Download as PDF</a></li>
+			<li><a href="#">Printable version</a></li>
+			
+			<li><h4>Languages</h4><i class="fa fa-cog" aria-hidden="true"></i><a href="#">Espanol</a></li>
+			<li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i>Edit links</a></li>
+		</ul>
+	</div>
+	
+	<div class="main-content">
+		<div class="nav_menu">
+		 <div class="left">
+			<a class="nav-menu" href="#">Article</a>
+			<a class="nav-menu" href="#">Talk</a>
+		 </div>
+		 <div class="right">
+			<a class="nav-menu" href="#">Read</a>
+			<a class="nav-menu" href="#">Edit</a>
+			<a class="nav-menu" href="#">View history</a>
+			 <input type="text"  placeholder="Search Wikipedia"><a class="search" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+		 </div>
+	  </div>
+	  <h1>Communist Mutants from Space</h1>
+		
+		<p class="source">from Wikipedia, the free encyclopedia</p>
+		
+		<div class="content-box-image">
+	     <figure>
+		    <span class="pic">Communist Mutants from Space</span> 
+	 	    <img src="assets\picture1.jpg" alt="cover_art">
+	 	    <figcaption>Cover art</figcaption>
+	     </figure>
+	     <table>
+					<tr>
+						<td><a href="#">Developer(s)</a></td>
+						<td><a href="#">Starpath</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">Publisher(s)</a></td>
+						<td><a href="#">Starpath</a></td>
+					</tr>
+					<tr>
+						<td><a href="#">Programmer(s)</a></td>
+						<td>Stephen H. Landrum</td>
+					</tr>
+					<tr>
+						<td><a href="#">Platform(s)</a></td>
+						<td><a href="#">Atari 2600</a></td>
+					</tr>
+					<tr>
+						<td>Release</td>
+						<td><a href="#">NA:</a> 1982</td>
+					</tr>
+					<tr>
+						<td><a href="#">Genre(s)</a></td>
+						<td><a href="#">Fixed shooter</a></td>
+					</tr>
+					<tr>
+						<td>Mode(s)</td>
+						<td><a href="#">Single-player</a></td>
+					</tr>
+				</table>
+    </div>
+
+		<p>Communist Mutants from Space is a fixed shooter video game programmed by Stephen H. Landrum for the Atari 2600 with the Starpath Supercharger cassette accessory. It was published in 1982 by Starpath (formerly Arcadia).[2] The game is similar to Galaxian,[3] adding a variety of gameplay-changing options.</p>
+		
+		<div class="content-list">
+		 <div class="content-box">
+			 <p class="cont_paragh">Contents [<a href="#">hide</a>]</p>
+	    <ul>
+	     <li><a href="#">
+				    <span class="number">1</span>
+				 		<span class="text">Plot</span>
+			     </a>
+			 </li>
+	     <li><a href="#">
+				 	  <span class="number">2</span>
+				 		<span class="text">Gameplay</span>	
+				   </a>
+			  <ul>
+				 <li><a href="#">
+					    <span class="number">2.1</span>
+				 		  <span class="text">Game options</span>
+					   </a>
+				 </li>
+			  </ul>
+	     </li>
+	     <li><a href="#">
+				 		<span class="number">3</span>
+				 		<span class="text">Easter egg</span>
+				   </a>
+			 </li>
+	     <li><a href="#">
+				 		<span class="number">4</span>
+				 		<span class="text">References</span>
+				   </a>
+			 </li>
+	     <li><a href="#">
+				 		<span class="number">5</span>
+				 		<span class="text">External links</span>
+				   </a>
+			 </li>
+	    </ul>
+		 </div>
+		</div>
+		
+		<h2>Plot</h2>
+		
+		<p>Aliens from the communist planet of Rooskee are invading peaceful, democratic planets and turning their inhabitants into "Communist Mutants." The communist mutant armies are controlled by the Mother Creature, a strange alien who has gone mad due to irradiated vodka.</p>
+		
+		<h2>Gameplay</h2>
+		
+		<div class="card">
+     <img src="assets/commiemutants.png" alt="gamepaly" style="width: 9rem">
+      <div class="container">
+       <p class="picture-card">Destroy the Mother Creature while avoiding mutants and their bombs.</p> 
+      </div>
+    </div>
+		
+		<p>The player starts off with three reserve cannons. The object is to destroy the mutants aliens and, most importantly, the Mother Creature. The mutants hatch from moving eggs at the top of the screen. Because the Mother Creature replenishes eggs when they hatch or are destroyed, it must be defeated before the player can advance to the next wave. If a mutant or a bomb thrown by a mutant comes into contact with the cannon, the cannon will be destroyed and a reserve must be called up. A new cannon is awarded on every other wave.</p>
+		
+		<h3>Game options</h3>
+		
+		<p>An in-game menu allows a variety of gameplay changes. The player may toggle the shield option on or off. If activated, "shield" mode allowed a player to press down on the joystick to become invincible for a short period (only one shield was allotted per level). "Time warp" allows the player to press up on the joystick to temporarily slow the enemies. The type of shot fired can be changed by activating the "penetrating fire" option (which enhances the beam fired so that it can hit two mutants rather than one) and/or the "guided fire" option (which causes the beam to be moved with the joystick rather than firing in a straight line). The menu also allows for multiple players (up to four) to play. Players one and three share the first joystick while players two and four share the second.</p>
+		
+		<h2>Easter egg</h2>
+		
+		<p>Holding fire during power-on of the Atari 2600 causes the "HI" on the high scores screen to change to "SHL", the initials of programmer Stephen H. Landrum.</p>
+		
+		<h2>References</h2>
+		
+		<ul class="reference">
+			<li>Hague, James. <a href="#">"The Giant List of Classic Game Programmers"</a></li>
+			<li><a href="#">I break for Arcadians:Entertainment abounds in a gaggle of games,</a> Page 26, InfoWorld, 27 Jun 1983,</li>
+			<li>Brundage, Darryl (June 23, 2005).<a href="#">"Communist Mutants from Space".</a> The Atari Times.</li>
+			<li>"Communist Mutants from Space manual". archive.org. Starpath. 1982.</li>
+			<li>Federico, Chris. <a href="#">"The Complete 2600 Easter Egg Archive".</a> Orphaned Computers & Game Systems. Retrieved 2007-12-28
+			</li>
+		</ul>
+		
+		<h2>External links</h2>
+		
+		<ul class="external">
+			<li><a class="external_link" href="#">Communist Mutants from Space</a> at Atari Mania</li>
+		</ul>
+		
+		<div class="categories">
+			<p class="category"><a class="main" href="#">Categories:</a> <span class="line">|</span> <a href="#">1982 video games</a> <span class="line">|</span> <a href="#">Atari 2600 games</a> <span class="line">|</span> <a href="#">Atari 2600-only games</a> <span class="line">|</span> <a href="#">Cold War video games</a> <span class="line">|</span> <a href="#">Fixed shooters</a> <span class="line">|</span> <a href="#">North America-exclusive video games</a> <span class="line">|</span> <a href="#">Starpath games</a> <span class="line">|</span> <a href="#">Video games developed in the United States</a></p>
+		
+		</div>
+		
+	</div>
+	<div class="footer_page">
+		<p class="footer">This page was last edited on 1 September 2019, at 17:06 (UTC).</p>
+		<p class="footer">Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.</p>
+		
+		<div class="footer_links">
+			<a class="footer-menu" href="#">Privacy policy</a>
+			<a class="footer-menu" href="#">About Wikipedia</a>
+			<a class="footer-menu" href="#">Disclaimers</a>
+			<a class="footer-menu" href="#">Contact Wikipedia</a>
+			<a class="footer-menu" href="#">Developers</a>
+			<a class="footer-menu" href="#">Statistics</a>
+			<a class="footer-menu" href="#">Cookie statement</a>
+			<a class="footer-menu" href="#">Mobile view</a>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+		html {
+			font-size: 16px;
+		}
+		body {
+			height: 100vh;
+			width: 100vw;
+		  font-size: 1rem;
+			line-height: 140%;
+			font-family: sans-serif;
+			background: #f6f6f6;
+		
+		}
+		.top-navigation-menu {
+			margin-top: 0.5rem;
+			margin-bottom: 1.5rem;
+			margin-right: 1rem;
+			display: inline-block;
+			float: right;
+			font-size: 0.8rem;
+		}
+		.menu-links {
+			margin-right: 0.65rem;
+		}
+		.main-content {
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			background: #FFF;
+			border: 1px solid #a7d7f9;
+			width: 85%;
+			display: inline-block;
+			float: right;
+		}
+		.nav_menu {
+			font-size: 0.8rem;
+			margin-bottom: 2.5rem;
+			margin-left: 0.35rem;
+			margin-right: 1rem;
+			margin-top: 0.25rem;
+		}
+		.left {
+			display: inline-block;
+			float: left;
+			margin-right: 5rem;
+		}
+		.right {
+			display: inline-block;
+			float: right;
+		}
+		.nav-menu {
+			margin-right: 0.8rem;
+		}
+		a {
+			color: #066cc7;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		.search {
+			color: grey;
+		}
+		h1 {
+			font-size: 2rem;
+			font-style: oblique;
+			margin-top: 1rem;
+			margin-left: 1.5rem;
+			margin-right: 1.5rem;
+		}
+		h1::after {
+    content: "";
+    display: block;
+    height: .0625rem;
+    width: 100%;
+		background-color: #a2a9b1;
+		margin-top: 0.6rem;
+		margin-bottom: 0.6rem;	
+		}
+		.source {
+			font-size: 0.9rem;
+			margin-bottom: 1.125rem;
+		}
+		.content-box {
+		 border: 1px solid #a2a9b1;
+		 background: #f8f9fa;
+  	 padding: 0.75rem;
+		 width: 7.25rem;
+		 margin-left: 1.5rem;
+		 margin-top: 1rem;
+		 margin-bottom: 1rem;
+		}
+		.cont_paragh {
+			margin: 0;
+			padding: 0;
+		}
+		ol {
+			list-style-type: decimal-leading-zero;
+		}
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+			margin-left: 1.5rem;
+			margin-right: 1.5rem;
+		}
+		h2::after {
+    content: "";
+    display: block;
+    height: .0625rem;
+    width: 100%;
+		background-color: #a2a9b1;
+		margin-top: 0.3rem;
+		margin-bottom: 0.6rem;	
+		}
+		h3 {
+			font-size: 1.2rem;
+			font-weight: bold;
+			margin-left: 1.5rem;
+			margin-bottom: 1rem;
+			margin-top: 1rem;
+		}
+		p {
+			margin-left: 1.5rem;
+			margin-right: 1.5rem;
+		}
+		.reference {
+			list-style-type: decimal;
+			margin-left: 2.5rem;
+			margin-top: 0.5rem;
+			font-size: 0.9rem;
+		}
+		.external {
+			margin-left: 1.5rem;
+		}
+		.external_link {
+			font-style: oblique;
+		}
+		.categories {
+			border: 1px solid #a2a9b1;
+			padding: 0.35rem;
+			margin-top: 1rem;
+			margin-left: 1.5rem;
+			margin-bottom: 1rem;
+			margin-right: 1.5rem;
+			background: #f8f9fa;
+		}
+		.line {
+			color: #a2a9b1;
+		}
+		.category {
+			margin: 0;
+			padding: 0;
+		}
+		.main {
+			color: darkblue;
+			text-decoration: none;
+		}
+		.footer {
+			font-size: 0.7rem;
+			margin-bottom: 0.8rem;
+		}
+		.footer_links {
+			margin-left: 1.5rem;
+			margin-top: 1rem;
+			font-size: 0.7rem;
+			margin-bottom: 2rem;
+		}
+		.footer-menu {
+			margin-right: 0.75rem;
+		}
+		.side-menu {
+		width: 8%;
+		display: inline-block;
+		float: left;
+		font-size: 0.8rem;
+		margin-top: 1rem;
+		margin-left: 1.5rem;
+		}
+		#logo {
+			height: 10rem;
+			width: 14rem;
+			margin-left: -2rem;
+			margin-bottom: 1rem;
+		}
+		h4 {
+			margin-top: 1rem;
+		}
+		h4:after {
+			content: "";
+    	display: block;
+    	height: .0625rem;
+			width: 100%;
+			background-color: #a2a9b1;
+			margin-top: 0.4rem;
+			margin-bottom: 0.4rem;
+		}
+		
+		/* -- Picture-box style -- */
+		
+		.content-box-image {
+	width: 17.5rem; 
+	border: 1px solid #a2a9b1;
+	display: inline-block;
+	float: right;
+	background: #f8f9fa;
+	margin-left: 1rem;
+	margin-bottom: 1rem;
+	margin-right: 1.5rem;
+}
+figure {
+	padding-left: 1.75rem;
+	padding-right: 1.75rem;
+	padding-top: 0.5rem;
+}
+.pic {
+	text-align: center;
+	font-weight: 700;
+	padding-bottom: 0.5rem;
+	font-size: 0.9rem;
+	font-style: oblique;
+}
+figcaption {
+	font-size: 0.8rem;
+	text-align: center;
+}
+table {
+	line-height: 1.5rem;
+}
+td {
+	padding-left: 0.5rem;
+}
+
+img {
+	text-align: center;
+}
+.footer_page {
+	display: block;
+	float: right;
+	margin-left: 12.5rem;
+	margin-top: 1.5rem;
+}
+
+		
+		/* -- style of picture card -- */	
+		
+		
+		.picture-card {
+			font-size: 0.7rem;
+			margin: 0;
+			padding: 0;
+		}
+		.card {
+  		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  		transition: 0.3s;
+  		width: 9rem;
+			display: inline-block;
+			float: left;
+			margin-right: 1.5rem;
+			margin-left: 1.5rem;
+			margin-bottom: 1.5rem;
+			border: 1px solid #a2a9b1;
+		}
+
+		.card:hover {
+  		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+
+		.container {
+  		padding: 2px 16px;
+		}
+		
+		---------------------------
